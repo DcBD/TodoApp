@@ -1,0 +1,6 @@
+D:\Projects\School\TodoApp\TodoApp.Domain\bin\Debug\TodoApp.Domain.dll
+D:\Projects\School\TodoApp\TodoApp.Domain\bin\Debug\TodoApp.Domain.pdb
+D:\Projects\School\TodoApp\TodoApp.Domain\obj\Debug\TodoApp.Domain.csprojAssemblyReference.cache
+D:\Projects\School\TodoApp\TodoApp.Domain\obj\Debug\TodoApp.Domain.csproj.CoreCompileInputs.cache
+D:\Projects\School\TodoApp\TodoApp.Domain\obj\Debug\TodoApp.Domain.dll
+D:\Projects\School\TodoApp\TodoApp.Domain\obj\Debug\TodoApp.Domain.pdb
