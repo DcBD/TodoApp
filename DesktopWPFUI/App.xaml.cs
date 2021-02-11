@@ -13,5 +13,7 @@ namespace DesktopWPFUI
     /// </summary>
     public partial class App : Application
     {
+
+  
     }
 }
