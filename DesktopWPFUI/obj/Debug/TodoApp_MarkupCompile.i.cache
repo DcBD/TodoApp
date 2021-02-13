@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Projects\School\TodoApp\DesktopWPFUI\App.xaml
-3554985635
+4-653602364
 
-171890656329
+18-200203767
 13-1505183044
-Controls\MajorIndexCard.xaml;Controls\NavigationBar.xaml;MainWindow.xaml;
+Controls\NavigationBar.xaml;Controls\TaskCard.xaml;MainWindow.xaml;Views\HomeView.xaml;
 
 True
 

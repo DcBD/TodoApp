@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DesktopWPFUI.Controls
+namespace DesktopWPFUI.Views
 {
     /// <summary>
-    /// Logika interakcji dla klasy MajorIndexCard.xaml
+    /// Logika interakcji dla klasy HomeView.xaml
     /// </summary>
-    public partial class MajorIndexCard : UserControl
+    public partial class HomeView : UserControl
     {
-        public MajorIndexCard()
+        public HomeView()
         {
             InitializeComponent();
         }
