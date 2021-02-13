@@ -16,3 +16,17 @@ D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\TodoApp.pdb
 D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Controls\NavigationBar.g.cs
 D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Controls\NavigationBar.baml
 D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Controls\TaskCard.g.cs
+D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Views\HomeView.g.cs
+D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Windows\CreateTaskWindow.g.cs
+D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Controls\TaskCard.baml
+D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Views\HomeView.baml
+D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Windows\CreateTaskWindow.baml
+D:\Projects\School\TodoApp\DesktopWPFUI\bin\Debug\TodoApp.Domain.dll
+D:\Projects\School\TodoApp\DesktopWPFUI\bin\Debug\TodoApp.EntityFramework.dll
+D:\Projects\School\TodoApp\DesktopWPFUI\bin\Debug\EntityFramework.dll
+D:\Projects\School\TodoApp\DesktopWPFUI\bin\Debug\TodoApp.Domain.pdb
+D:\Projects\School\TodoApp\DesktopWPFUI\bin\Debug\TodoApp.EntityFramework.pdb
+D:\Projects\School\TodoApp\DesktopWPFUI\bin\Debug\TodoApp.EntityFramework.dll.config
+D:\Projects\School\TodoApp\DesktopWPFUI\bin\Debug\EntityFramework.xml
+D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\DesktopWPFUI.csproj.CopyComplete

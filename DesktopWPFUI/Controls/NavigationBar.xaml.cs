@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DesktopWPFUI.Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,10 +21,21 @@ namespace DesktopWPFUI.Controls
     /// </summary>
     public partial class NavigationBar : UserControl
     {
+        private Window CreateTaskWindow { get; set; }
         public NavigationBar()
         {
             InitializeComponent();
         }
 
+        private void CreateTaskButton_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (CreateTaskWindow != null) CreateTaskWindow.Close();
+
+            CreateTaskWindow = new CreateTaskWindow();
+
+            CreateTaskWindow.Show();
+
+        }
     }
 }

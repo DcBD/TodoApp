@@ -24,7 +24,7 @@
             <ComboBoxItem Content="In progress" />
             <ComboBoxItem Content="Finished" />
         </ComboBox>
- 
 
+        <Button Grid.Column="2" Name="CreateTaskButton" Content="Add" Padding="5" Click="CreateTaskButton_Click"/>
     </Grid>
 </UserControl>
