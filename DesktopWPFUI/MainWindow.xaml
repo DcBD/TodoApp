@@ -4,12 +4,31 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DesktopWPFUI"
+        xmlns:controls="clr-namespace:DesktopWPFUI.Controls"
         mc:Ignorable="d"
-        Title="Todo App" Height="200" Width="800" ResizeMode="NoResize">
+        Title="Todo App" Height="450" Width="800" ResizeMode="NoResize">
     <Grid>
-        <TextBlock TextAlignment="Center" FontSize="40" VerticalAlignment="Center">
-              TODO APP
-        </TextBlock>
-          
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="20" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="20" />
+
+        </Grid.RowDefinitions>
+
+        <controls:NavigationBar Grid.Column="2" VerticalAlignment="Center" />
+
+
     </Grid>
 </Window>
