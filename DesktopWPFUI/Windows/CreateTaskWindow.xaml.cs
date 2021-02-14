@@ -33,12 +33,13 @@ namespace DesktopWPFUI.Windows
 
 
             taskService.Create(new TaskModel {
-
                 Name = this.Name.Text,
                 Description = this.Description.Text,
+                Start = this.Start.SelectedDate,
             });
 
-            Console.WriteLine("Saved");
+            this.Close();
+            
         }
     }
 }

@@ -11,5 +11,7 @@ namespace TodoApp.Domain.Models
 
         public string Description { get; set; }
 
+        public DateTime? Start { get; set; }
+
     }
 }
