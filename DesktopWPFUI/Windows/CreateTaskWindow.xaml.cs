@@ -12,8 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using TodoApp.Domain.Services;
+using TodoApp.EntityFramework;
 using TodoApp.EntityFramework.Services;
-
+using TaskModel = TodoApp.Domain.Models.Task;
 namespace DesktopWPFUI.Windows
 {
     /// <summary>
@@ -28,16 +29,14 @@ namespace DesktopWPFUI.Windows
 
         private void BtnSaveHandleClick(object sender, RoutedEventArgs e)
         {
-            IDataService<TodoApp.Domain.Models.Task> taskService = new GenericDataService<TodoApp.Domain.Models.Task>(new TodoApp.EntityFramework.TodoAppDbContextFactory());
-            
+            IDataService<TaskModel> taskService = new TaskDataService(new TodoAppDbContextFactory());
 
-            taskService.Create(new TodoApp.Domain.Models.Task 
-                { 
-                    Name = this.Name.Text,
-                    Description = this.Description.Text,
-                    IsFinished = false,
-                    Start = new DateTime(),
-                });
+
+            taskService.Create(new TaskModel {
+
+                Name = this.Name.Text,
+                Description = this.Description.Text,
+            });
 
             Console.WriteLine("Saved");
         }

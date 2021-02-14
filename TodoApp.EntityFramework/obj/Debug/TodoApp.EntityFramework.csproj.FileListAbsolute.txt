@@ -12,5 +12,5 @@ D:\Projects\School\TodoApp\TodoApp.EntityFramework\obj\Debug\TodoApp.EntityFrame
 D:\Projects\School\TodoApp\TodoApp.EntityFramework\obj\Debug\TodoApp.EntityFramework.csproj.CopyComplete
 D:\Projects\School\TodoApp\TodoApp.EntityFramework\obj\Debug\TodoApp.EntityFramework.dll
 D:\Projects\School\TodoApp\TodoApp.EntityFramework\obj\Debug\TodoApp.EntityFramework.pdb
-D:\Projects\School\TodoApp\TodoApp.EntityFramework\obj\Debug\TodoApp.EntityFramework.Migrations.CreateTask.resources
+D:\Projects\School\TodoApp\TodoApp.EntityFramework\obj\Debug\TodoApp.EntityFramework.Migrations.init.resources
 D:\Projects\School\TodoApp\TodoApp.EntityFramework\obj\Debug\TodoApp.EntityFramework.csproj.GenerateResource.cache

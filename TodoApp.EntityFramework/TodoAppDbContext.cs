@@ -10,9 +10,13 @@ namespace TodoApp.EntityFramework
     public class TodoAppDbContext : DbContext
     {
         public DbSet<Task> Tasks { get; set; }
-        public DbSet<TaskTag> TasksTags { get; set; }
 
-        public DbSet<Tag> Tags { get; set; }
+
+        public TodoAppDbContext() : base("TodoAppDbContext")
+        {
+
+        }
+        
 
         internal System.Threading.Tasks.Task SaveChangesAsync<T>(T entity)
         {

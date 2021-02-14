@@ -30,3 +30,5 @@ D:\Projects\School\TodoApp\DesktopWPFUI\bin\Debug\TodoApp.EntityFramework.pdb
 D:\Projects\School\TodoApp\DesktopWPFUI\bin\Debug\TodoApp.EntityFramework.dll.config
 D:\Projects\School\TodoApp\DesktopWPFUI\bin\Debug\EntityFramework.xml
 D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\DesktopWPFUI.csproj.CopyComplete
+D:\Projects\School\TodoApp\DesktopWPFUI\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\School\TodoApp\DesktopWPFUI\bin\Debug\EntityFramework.SqlServer.xml
