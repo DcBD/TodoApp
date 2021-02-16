@@ -12,7 +12,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using TodoApp.Domain.Services;
+using TodoApp.EntityFramework;
+using TodoApp.EntityFramework.Services;
+using TaskModel = TodoApp.Domain.Models.Task;
 namespace DesktopWPFUI
 {
     /// <summary>
@@ -20,8 +23,23 @@ namespace DesktopWPFUI
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        public TaskModel Task { get; set; }
+        public List<TaskModel> Tasks { get; set; }
+
+
         public MainWindow()
         {
+            TaskDataService taskService = new TaskDataService(new TodoAppDbContextFactory());
+
+            //Task = taskService.Get(7).Result;
+            Tasks = taskService.GetAllItems();
+
+
+
+
+
+            DataContext = this;
             InitializeComponent();
         }
     }

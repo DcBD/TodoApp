@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -51,13 +52,13 @@ namespace TodoApp.EntityFramework.Services
             }
         }
 
-        public Task<IEnumerable<TaskModel>> GetAll()
+        public async Task<IEnumerable<TaskModel>> GetAll()
         {
             using (TodoAppDbContext context = _contextFactory.CreateDbContext())
             {
-                IEnumerable<TaskModel> entities = context.Set<TaskModel>().ToList();
+                IEnumerable<TaskModel> entities = await context.Set<TaskModel>().ToListAsync();
 
-                return (Task<IEnumerable<TaskModel>>)entities;
+                return entities;
             }
         }
 
@@ -72,6 +73,16 @@ namespace TodoApp.EntityFramework.Services
                 await context.SaveChangesAsync();
 
                 return entity;
+            }
+        }
+
+        public List<TaskModel> GetAllItems()
+        {
+            using (TodoAppDbContext context = _contextFactory.CreateDbContext())
+            {
+                List<TaskModel> entities = context.Set<TaskModel>().ToList();
+
+                return entities;
             }
         }
     }

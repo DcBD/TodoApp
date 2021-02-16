@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DesktopWPFUI"
         xmlns:controls="clr-namespace:DesktopWPFUI.Controls"
+        
         mc:Ignorable="d"
         Title="Todo App" Height="450" Width="800" ResizeMode="NoResize">
     <Grid>
@@ -28,7 +29,19 @@
         </Grid.RowDefinitions>
 
         <controls:NavigationBar Grid.Column="2" VerticalAlignment="Center" />
+        <ItemsControl ItemsSource="{Binding Tasks}" Grid.Column="2" Grid.Row="4">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
 
+                    <StackPanel Orientation="Vertical">
+
+                        <controls:TaskCard Grid.Column="2" Grid.Row="4" DataContext="{Binding Path=.}"/>
+
+                    </StackPanel>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+
+        </ItemsControl>
 
     </Grid>
 </Window>
