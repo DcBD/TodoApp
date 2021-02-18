@@ -32,15 +32,13 @@ namespace DesktopWPFUI
         {
             TaskDataService taskService = new TaskDataService(new TodoAppDbContextFactory());
 
-            //Task = taskService.Get(7).Result;
             Tasks = taskService.GetAllItems();
-
-
-
-
 
             DataContext = this;
             InitializeComponent();
+            
         }
+
+
     }
 }

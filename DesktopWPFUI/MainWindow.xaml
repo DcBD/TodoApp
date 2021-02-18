@@ -29,19 +29,22 @@
         </Grid.RowDefinitions>
 
         <controls:NavigationBar Grid.Column="2" VerticalAlignment="Center" />
-        <ItemsControl ItemsSource="{Binding Tasks}" Grid.Column="2" Grid.Row="4">
-            <ItemsControl.ItemTemplate>
-                <DataTemplate>
+        <ScrollViewer Grid.Column="2" Grid.Row="4" VerticalScrollBarVisibility="Auto">
+            <ItemsControl  ItemsSource="{Binding Tasks}" >
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
 
-                    <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Vertical">
 
-                        <controls:TaskCard Grid.Column="2" Grid.Row="4" DataContext="{Binding Path=.}"/>
+                            <controls:TaskCard Grid.Column="2" Grid.Row="4" DataContext="{Binding Path=.}"/>
 
-                    </StackPanel>
-                </DataTemplate>
-            </ItemsControl.ItemTemplate>
+                        </StackPanel>
 
-        </ItemsControl>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+
+            </ItemsControl>
+        </ScrollViewer>
 
     </Grid>
 </Window>
