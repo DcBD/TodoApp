@@ -24,6 +24,7 @@ namespace DesktopWPFUI.Controls
         private Window CreateTaskWindow { get; set; }
         public NavigationBar()
         {
+         
             InitializeComponent();
         }
 
@@ -32,7 +33,7 @@ namespace DesktopWPFUI.Controls
 
             if (CreateTaskWindow != null) CreateTaskWindow.Close();
 
-            CreateTaskWindow = new CreateTaskWindow();
+            CreateTaskWindow = new CreateTaskWindow((MainWindow) Window.GetWindow(this));
 
             CreateTaskWindow.Show();
 

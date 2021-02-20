@@ -22,8 +22,11 @@ namespace DesktopWPFUI.Windows
     /// </summary>
     public partial class CreateTaskWindow : Window
     {
-        public CreateTaskWindow()
+        private MainWindow MainWindow {get; set;}
+
+        public CreateTaskWindow(MainWindow mainWindow)
         {
+            MainWindow = mainWindow;
             InitializeComponent();
         }
 
@@ -36,7 +39,9 @@ namespace DesktopWPFUI.Windows
                 Name = this.Name.Text,
                 Description = this.Description.Text,
                 Start = this.Start.SelectedDate,
-            });
+            }).Wait();
+
+            MainWindow.UpdateTasksList();
 
             this.Close();
             

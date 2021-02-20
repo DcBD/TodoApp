@@ -44,14 +44,26 @@ namespace DesktopWPFUI
 
         public MainWindow()
         {
+
+            UpdateTasksList();
+
+            DataContext = this;
+
+            InitializeComponent();
+
+        }
+
+        public void UpdateTasksList()
+        {
             TaskDataService taskService = new TaskDataService(new TodoAppDbContextFactory());
 
             Tasks = taskService.GetAllItems();
 
-            CurrentTask = Tasks.Last();
+            
+            if(Tasks.Count > 0) {
+                CurrentTask = Tasks?.Last();
 
-            DataContext = this;
-            InitializeComponent();
+            }
 
         }
 

@@ -80,6 +80,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Commands\CreateTaskCommand.cs" />
     <Compile Include="Commands\UpdateCurrentViewModelCommand.cs" />
     <Compile Include="Controls\TaskCard.xaml.cs">
       <DependentUpon>TaskCard.xaml</DependentUpon>

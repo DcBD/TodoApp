@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enums\Priority.cs" />
+    <Compile Include="Enums\Status.cs" />
     <Compile Include="Models\DomainObject.cs" />
     <Compile Include="Models\Task.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -24,7 +24,7 @@ namespace TodoApp.EntityFramework.Services
             {
           
                 var createdEntity = context.Tasks.Add(entity);
-                await context.SaveChangesAsync();
+                context.SaveChanges();
 
                 return createdEntity;
             }
