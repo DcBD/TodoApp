@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DesktopWPFUI.Windows"
         mc:Ignorable="d"
-        Title="CreateTaskWindow" Height="400" Width="800">
+        Title="CreateTaskWindow" Height="400" Width="800" WindowStyle="ToolWindow">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20" />

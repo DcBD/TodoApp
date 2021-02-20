@@ -16,6 +16,8 @@ namespace TodoApp.Domain.Models
 
         public Status Status { get; set; } = Status.NEW;
 
+        public IEnumerable<TaskTag> TaskTags { get; set; }
+
         [NotMapped]
         public string StatusText { get {
                 switch (this.Status)
