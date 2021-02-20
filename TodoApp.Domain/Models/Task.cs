@@ -13,5 +13,7 @@ namespace TodoApp.Domain.Models
 
         public DateTime? Start { get; set; }
 
+        public Status Status { get; set; } = Status.NEW;
+
     }
 }
