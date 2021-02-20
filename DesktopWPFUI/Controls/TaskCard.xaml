@@ -9,7 +9,7 @@
     <Border BorderBrush="LightGray" BorderThickness="1" CornerRadius="10">
         <Grid Margin="10">
             <Grid.RowDefinitions>
-                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto" />
             </Grid.RowDefinitions>
 

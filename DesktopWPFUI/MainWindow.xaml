@@ -30,13 +30,13 @@
 
         <controls:NavigationBar Grid.Column="2" VerticalAlignment="Center" />
         <ScrollViewer Grid.Column="2" Grid.Row="4" VerticalScrollBarVisibility="Auto">
-            <ItemsControl  ItemsSource="{Binding Tasks}" >
+            <ItemsControl x:Name="TasksItemList"  MouseDown="TasksItemList_MouseDown" ItemsSource="{Binding Tasks}" >
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
 
                         <StackPanel Orientation="Vertical">
 
-                            <controls:TaskCard Grid.Column="2" Grid.Row="4" DataContext="{Binding Path=.}"/>
+                            <controls:TaskCard Grid.Column="2" Grid.Row="4" DataContext="{Binding Path=.}" MouseDown="TaskCard_MouseDown"/>
 
                         </StackPanel>
 
@@ -45,6 +45,8 @@
 
             </ItemsControl>
         </ScrollViewer>
+
+        <controls:TaskContents DataContext="{Binding CurrentTask}" Grid.Column="4" Grid.Row="4" />
 
     </Grid>
 </Window>

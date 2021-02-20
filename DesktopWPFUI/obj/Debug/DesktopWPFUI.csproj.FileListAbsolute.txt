@@ -32,3 +32,5 @@ D:\Projects\School\TodoApp\DesktopWPFUI\bin\Debug\EntityFramework.xml
 D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\DesktopWPFUI.csproj.CopyComplete
 D:\Projects\School\TodoApp\DesktopWPFUI\bin\Debug\EntityFramework.SqlServer.dll
 D:\Projects\School\TodoApp\DesktopWPFUI\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Controls\TaskContents.g.cs
+D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Controls\TaskContents.baml

@@ -84,6 +84,9 @@
     <Compile Include="Controls\TaskCard.xaml.cs">
       <DependentUpon>TaskCard.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\TaskContents.xaml.cs">
+      <DependentUpon>TaskContents.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Models\ObservableObject.cs" />
     <Compile Include="State\Navigators\INavigator.cs" />
     <Compile Include="State\Navigators\Navigator.cs" />
@@ -103,6 +106,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\TaskCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TaskContents.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
