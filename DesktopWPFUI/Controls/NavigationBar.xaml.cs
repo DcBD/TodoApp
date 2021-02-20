@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TodoApp.Domain.Enums;
 
 namespace DesktopWPFUI.Controls
 {
@@ -22,11 +23,16 @@ namespace DesktopWPFUI.Controls
     public partial class NavigationBar : UserControl
     {
         private Window CreateTaskWindow { get; set; }
+
+        
         public NavigationBar()
         {
-         
+            
+
             InitializeComponent();
         }
+
+        
 
         private void CreateTaskButton_Click(object sender, RoutedEventArgs e)
         {

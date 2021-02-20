@@ -19,10 +19,10 @@
 
         </Grid.ColumnDefinitions>
 
-        <ComboBox Grid.Column="1">
-            <ComboBoxItem Content="All" />
-            <ComboBoxItem Content="In progress" />
-            <ComboBoxItem Content="Finished" />
+        <ComboBox Name="FilterComboBox" Grid.Column="1" SelectedIndex="0">
+            <ComboBoxItem Name="FilterAll" Content="All" />
+            <ComboBoxItem Name="FilterInProgress" Content="In progress" />
+            <ComboBoxItem Name="FilterFinished" Content="Finished" />
         </ComboBox>
 
         <Button Grid.Column="2" Name="CreateTaskButton" Content="Add" Padding="5" Click="CreateTaskButton_Click"/>

@@ -15,3 +15,4 @@ D:\Projects\School\TodoApp\TodoApp.EntityFramework\obj\Debug\TodoApp.EntityFrame
 D:\Projects\School\TodoApp\TodoApp.EntityFramework\obj\Debug\TodoApp.EntityFramework.Migrations.init.resources
 D:\Projects\School\TodoApp\TodoApp.EntityFramework\obj\Debug\TodoApp.EntityFramework.csproj.GenerateResource.cache
 D:\Projects\School\TodoApp\TodoApp.EntityFramework\obj\Debug\TodoApp.EntityFramework.Migrations.update_task_add_start.resources
+D:\Projects\School\TodoApp\TodoApp.EntityFramework\obj\Debug\TodoApp.EntityFramework.Migrations.add_status_field_to_task_table.resources

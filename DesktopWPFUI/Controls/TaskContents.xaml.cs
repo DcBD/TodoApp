@@ -12,7 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using TodoApp.Domain.Enums;
+using TaskModel = TodoApp.Domain.Models.Task;
 namespace DesktopWPFUI.Controls
 {
     /// <summary>
@@ -20,9 +21,13 @@ namespace DesktopWPFUI.Controls
     /// </summary>
     public partial class TaskContents : UserControl
     {
+    
         public TaskContents()
         {
             InitializeComponent();
         }
+
+
+
     }
 }
