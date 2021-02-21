@@ -13,6 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TodoApp.Domain.Enums;
+using TodoApp.Domain.Services;
+using TodoApp.EntityFramework;
+using TodoApp.EntityFramework.Services;
 using TaskModel = TodoApp.Domain.Models.Task;
 namespace DesktopWPFUI.Controls
 {
@@ -23,11 +26,28 @@ namespace DesktopWPFUI.Controls
     {
     
         public TaskContents()
-        {
+        { 
+
+
             InitializeComponent();
         }
 
 
 
+        private void DeleteTaskButton_Click(object sender, RoutedEventArgs e)
+        {
+
+            var taskModel = (TaskModel) this.DataContext;
+
+            if (taskModel != null) {
+                IDataService<TaskModel> taskService = new TaskDataService(new TodoAppDbContextFactory());
+
+                taskService.Delete(taskModel.Id);
+
+                MainWindow mainWindow = (MainWindow) Window.GetWindow(this);
+
+                mainWindow.UpdateTasksList();
+            }
+        }
     }
 }

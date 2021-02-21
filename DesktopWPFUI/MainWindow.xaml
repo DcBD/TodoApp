@@ -4,10 +4,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DesktopWPFUI"
-        xmlns:controls="clr-namespace:DesktopWPFUI.Controls"
-         
+        xmlns:controls="clr-namespace:DesktopWPFUI.Controls" xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="Todo App" Height="450" Width="800" ResizeMode="NoResize" WindowStyle="ThreeDBorderWindow">
+        Title="Todo App" Height="450" MinWidth="800" MinHeight="450" WindowStyle="ThreeDBorderWindow">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF63A3FF" Offset="0"/>
+            <GradientStop Color="#FF3F3FFF" Offset="1"/>
+            <GradientStop Color="#FF217CFF" Offset="0.298"/>
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20" />
@@ -28,9 +34,18 @@
 
         </Grid.RowDefinitions>
 
-        <controls:NavigationBar Grid.Column="2" VerticalAlignment="Center" />
-        <ScrollViewer Grid.Column="2" Grid.Row="4" VerticalScrollBarVisibility="Auto">
-            <ItemsControl x:Name="TasksItemList"  MouseDown="TasksItemList_MouseDown" ItemsSource="{Binding Tasks}" >
+        <TextBlock Grid.Column="2" Text="Tasks list"  FontSize="30" TextAlignment="Center" VerticalAlignment="Center" FontWeight="DemiBold" 
+                   Foreground="White"
+                   />
+
+
+        <controls:NavigationBar  Grid.Column="4" VerticalAlignment="Center"/>
+        
+        <ScrollViewer  Grid.Column="2" Grid.Row="4" VerticalScrollBarVisibility="Visible">
+            <ScrollViewer.Resources>
+                <sys:Double x:Key="{x:Static SystemParameters.VerticalScrollBarWidthKey}">5</sys:Double>
+            </ScrollViewer.Resources>
+            <ItemsControl x:Name="TasksItemList"  MouseDown="TasksItemList_MouseDown" ItemsSource="{Binding Tasks}" Background="#35000000" >
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
 
@@ -46,7 +61,7 @@
             </ItemsControl>
         </ScrollViewer>
 
-        <controls:TaskContents DataContext="{Binding CurrentTask}" Grid.Column="4" Grid.Row="4" />
+        <controls:TaskContents x:Name="TaskContentsBox"  DataContext="{Binding CurrentTask}" Grid.Column="4" Grid.Row="4"/>
 
     </Grid>
 </Window>

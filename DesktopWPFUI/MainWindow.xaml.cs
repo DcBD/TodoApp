@@ -30,6 +30,8 @@ namespace DesktopWPFUI
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        public Visibility CurrentTaskVisibility => _currentTask != null ? Visibility.Visible : Visibility.Hidden;
+
         public TaskModel CurrentTask {
             get { return _currentTask; }
             set { _currentTask = value; this.RaisePropertyChanged("CurrentTask"); }
@@ -64,6 +66,13 @@ namespace DesktopWPFUI
                 CurrentTask = Tasks?.Last();
 
             }
+            else {
+           
+                CurrentTask = null;
+            }
+
+            if(TaskContentsBox != null)
+                TaskContentsBox.Visibility = CurrentTaskVisibility;
 
         }
 

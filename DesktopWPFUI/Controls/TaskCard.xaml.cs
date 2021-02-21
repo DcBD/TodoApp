@@ -20,8 +20,11 @@ namespace DesktopWPFUI.Controls
     /// </summary>
     public partial class TaskCard : UserControl
     {
+
+
         public TaskCard()
         {
+            
             InitializeComponent();
         }
     }
