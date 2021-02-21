@@ -24,13 +24,27 @@ namespace DesktopWPFUI.Controls
     /// </summary>
     public partial class TaskContents : UserControl
     {
-    
+
+        public object Task { get; set; }
+        public object TaskContentsData { get; set; }
+
+     
+
         public TaskContents()
-        { 
-
-
+        {
             InitializeComponent();
+
+
+
+            DataContext = this;
         }
+
+    
+
+
+
+
+
 
 
 
@@ -48,6 +62,48 @@ namespace DesktopWPFUI.Controls
 
                 mainWindow.UpdateTasksList();
             }
+        }
+
+        private void StartTaskButton_Click(object sender, RoutedEventArgs e)
+        {
+            ChangeCurrentTaskStatus(Status.IN_PROGRESS);
+        }
+
+        private void SetTaskAsFinished_Click(object sender, RoutedEventArgs e)
+        {
+            ChangeCurrentTaskStatus(Status.FINISHED);
+        }
+
+        private void ChangeCurrentTaskStatus(Status status)
+        {
+            var taskModel = (TaskModel) this.DataContext;
+
+            if (taskModel != null) {
+                IDataService<TaskModel> taskService = new TaskDataService(new TodoAppDbContextFactory());
+
+                taskModel.Status = status;
+
+                taskService.Update(taskModel.Id, taskModel);
+
+                MainWindow mainWindow = (MainWindow) Window.GetWindow(this);
+
+                mainWindow.UpdateTasksList();
+            }
+        }
+
+
+  
+
+        private void UserControl_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            
+            if(this.DataContext is TaskModel) {
+                var taskModel = (TaskModel) this.DataContext;
+
+                this.StartTaskButton.Visibility = taskModel.Status == Status.NEW ? Visibility.Visible : Visibility.Hidden;
+                this.SetTaskAsFinished.Visibility = taskModel.Status == Status.IN_PROGRESS ? Visibility.Visible : Visibility.Hidden;
+            }
+
         }
     }
 }

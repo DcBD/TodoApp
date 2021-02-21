@@ -66,9 +66,9 @@ namespace TodoApp.EntityFramework.Services
         {
             using (TodoAppDbContext context = _contextFactory.CreateDbContext())
             {
-                entity.Id = id;
+                var editedEntity = context.Tasks.Where(e => e.Id == entity.Id).First();
 
-                context.Set<TaskModel>().Add(entity);
+                context.Entry(editedEntity).CurrentValues.SetValues(entity);
 
                 await context.SaveChangesAsync();
 

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:DesktopWPFUI"
         xmlns:controls="clr-namespace:DesktopWPFUI.Controls" xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="Todo App" Height="450" MinWidth="800" MinHeight="450" WindowStyle="ThreeDBorderWindow">
+        Title="Todo App" Height="450" MinWidth="800" Width="800" MinHeight="450" WindowStyle="ThreeDBorderWindow">
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#FF63A3FF" Offset="0"/>
@@ -61,7 +61,7 @@
             </ItemsControl>
         </ScrollViewer>
 
-        <controls:TaskContents x:Name="TaskContentsBox"  DataContext="{Binding CurrentTask}" Grid.Column="4" Grid.Row="4"/>
+        <controls:TaskContents x:Name="TaskContentsBox" DataContext="{Binding Path=CurrentTask, Mode=TwoWay, NotifyOnSourceUpdated=True}" Grid.Column="4" Grid.Row="4"/>
 
     </Grid>
 </Window>

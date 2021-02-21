@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DesktopWPFUI.Controls" xmlns:sys="clr-namespace:System;assembly=mscorlib"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800" DataContextChanged="UserControl_DataContextChanged">
     <Grid Name="TaskContentsGrid" Background="GhostWhite">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20" />
@@ -53,14 +53,14 @@
                 <RowDefinition Height="40"/>
             </Grid.RowDefinitions>
 
-            <TextBlock Grid.Row="0" Text="Start" FontWeight="Bold" />
-            <TextBlock Grid.Row="1" Text="{Binding Start}"  />
+            <TextBlock Grid.Row="0" Text="Start" FontWeight="Bold" FontSize="16"/>
+            <TextBlock Grid.Row="1" Text="{Binding Start}"  Padding="10" FontWeight="DemiBold"/>
 
-            <TextBlock Grid.Row="2" Text="Status" FontWeight="Bold" />
-            <TextBlock Grid.Row="3" Text="{Binding Path=StatusText}" />
+            <TextBlock Grid.Row="2" Text="Status" FontWeight="Bold" FontSize="16" />
+            <TextBlock Grid.Row="3" Text="{Binding Path=StatusText}" Padding="10" Foreground="Green" FontWeight="DemiBold" />
 
-            <Button Grid.Row="5" Content="Start" Padding="7" Margin="4" Background="#FFA1D0FF"/>
-            <Button Grid.Row="6" Content="Finish" Background="#FFFFF8AC" Padding="7" Margin="4"/>
+            <Button Name="StartTaskButton"   Grid.Row="5" Content="Start" Padding="7" Margin="4" Background="#FFA1D0FF" Click="StartTaskButton_Click"/>
+            <Button Name="SetTaskAsFinished" Grid.Row="5" Content="Finish" Background="#FFFFF8AC" Padding="7" Margin="4" Click="SetTaskAsFinished_Click"/>
             <Button Grid.Row="7" Content="Delete" Background="#FFFD7A65" Name="DeleteTaskButton" Click="DeleteTaskButton_Click" Padding="7" Margin="4"/>
 
 
