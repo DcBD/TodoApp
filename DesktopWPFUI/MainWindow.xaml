@@ -14,6 +14,7 @@
             <GradientStop Color="#FF217CFF" Offset="0.298"/>
         </LinearGradientBrush>
     </Window.Background>
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20" />
@@ -45,20 +46,45 @@
             <ScrollViewer.Resources>
                 <sys:Double x:Key="{x:Static SystemParameters.VerticalScrollBarWidthKey}">5</sys:Double>
             </ScrollViewer.Resources>
-            <ItemsControl x:Name="TasksItemList"  MouseDown="TasksItemList_MouseDown" ItemsSource="{Binding Tasks}" Background="#35000000" >
+            
+            <!--<ItemsControl x:Name="TasksItemList"  MouseDown="TasksItemList_MouseDown" ItemsSource="{Binding Tasks}" Background="#35000000" >
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
 
-                        <StackPanel Orientation="Vertical">
+                        <StackPanel Name="TasksListStackPanel" Orientation="Vertical" MouseLeftButtonUp="TasksListStackPanel_MouseLeftButtonUp">
 
-                            <controls:TaskCard Grid.Column="2" Grid.Row="4" DataContext="{Binding Path=.}" MouseDown="TaskCard_MouseDown"/>
+                            <controls:TaskCard  x:Name="TaskCardItem" Grid.Column="2" Grid.Row="4"  DataContext="{Binding Path=.}" MouseUp="TaskCard_MouseDown"/>
 
                         </StackPanel>
 
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
 
-            </ItemsControl>
+            </ItemsControl>-->
+            <ListBox x:Name="TasksItemList"  MouseDown="TasksItemList_MouseDown" ItemsSource="{Binding Tasks}" Background="#35000000" HorizontalContentAlignment="Stretch" SelectionChanged="TasksItemList_SelectionChanged">
+                <ListBox.ItemContainerStyle>
+                    <Style TargetType="ListBoxItem">
+                        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                        <Setter Property="Padding" Value="0" />
+                    </Style>
+                </ListBox.ItemContainerStyle>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+
+                        <Border x:Name="BXX" >
+                        <controls:TaskCard x:Name="TaskCardItem" Grid.Column="2" Grid.Row="4"  DataContext="{Binding Path=.}" MouseUp="TaskCard_MouseDown" />
+                        </Border>
+
+
+                        <DataTemplate.Triggers>
+                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ListBoxItem}}, Path=IsSelected}" Value="True">
+                                <Setter TargetName="TaskCardItem" Property="Background" Value="Red"/>
+                            </DataTrigger>
+                        </DataTemplate.Triggers>
+                    </DataTemplate>
+                    
+                </ListBox.ItemTemplate>
+            </ListBox>
         </ScrollViewer>
 
         <controls:TaskContents x:Name="TaskContentsBox" DataContext="{Binding Path=CurrentTask, Mode=TwoWay, NotifyOnSourceUpdated=True}" Grid.Column="4" Grid.Row="4"/>

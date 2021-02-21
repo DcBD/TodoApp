@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TaskModel = TodoApp.Domain.Models.Task;
 
 namespace DesktopWPFUI.Controls
 {
@@ -22,10 +23,19 @@ namespace DesktopWPFUI.Controls
     {
 
 
+        private Brush DefaultBackground { get; set; }
+
         public TaskCard()
         {
-            
+           
+
             InitializeComponent();
+
+  
+
+            DefaultBackground = this.Card.Background;
         }
+
+        
     }
 }

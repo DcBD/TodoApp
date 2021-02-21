@@ -28,6 +28,8 @@ namespace DesktopWPFUI
 
         private TaskModel _currentTask;
 
+        public bool IsTaskSelected(int taskId) => _currentTask?.Id == taskId;
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         public Visibility CurrentTaskVisibility => _currentTask != null ? Visibility.Visible : Visibility.Hidden;
@@ -97,6 +99,13 @@ namespace DesktopWPFUI
             if(taskModel != null) {
                 CurrentTask = taskModel;
             }
+           
+        }
+
+        private void TasksItemList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+
            
         }
     }
