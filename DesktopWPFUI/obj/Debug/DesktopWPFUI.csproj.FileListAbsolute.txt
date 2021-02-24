@@ -51,3 +51,5 @@ D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Views\TasksView.g.cs
 D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Views\ClientsView.baml
 D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Views\TagsView.baml
 D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Views\TasksView.baml
+D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Controls\TaskView\TaskBlock.g.cs
+D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Controls\TaskView\TaskBlock.baml

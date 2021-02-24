@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DesktopWPFUI.Views"
+             xmlns:taskControls="clr-namespace:DesktopWPFUI.Controls.TaskView"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
@@ -35,14 +36,27 @@
 
             <TextBlock Text="Here are your tasks!"  TextAlignment="Center" VerticalAlignment="Center" FontSize="21" FontWeight="DemiBold" Foreground="Black"/>
 
-           
+
         </Grid>
-        <StackPanel Grid.Row="1" Orientation="Horizontal">
-            <TextBlock Text="dasas" />
-        </StackPanel>
 
+        <ListBox x:Name="TasksItemList"  ItemsSource="{Binding Tasks}" Background="#35000000" HorizontalContentAlignment="Stretch" >
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                    <Setter Property="Padding" Value="0" />
+                </Style>
+            </ListBox.ItemContainerStyle>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
 
+                    <Border x:Name="BXX" >
+                        <taskControls:TaskBlock />
+                    </Border>
 
+                </DataTemplate>
+
+            </ListBox.ItemTemplate>
+        </ListBox>
 
 
 
