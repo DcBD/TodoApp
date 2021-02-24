@@ -22,7 +22,9 @@ namespace DesktopWPFUI.Windows
     /// </summary>
     public partial class CreateTaskWindow : Window
     {
-        private MainWindow MainWindow {get; set;}
+        private MainWindow MainWindow { get; set; }
+
+        private CreateTagWindow CreateTagWindow {get; set;}
 
         public CreateTaskWindow(MainWindow mainWindow)
         {
@@ -41,10 +43,29 @@ namespace DesktopWPFUI.Windows
                 Start = this.Start.SelectedDate,
             }).Wait();
 
+         
+
+            foreach(TextBox tb in TagsStackPanel.Children.AsParallel()) {
+                Console.WriteLine(tb.Text);
+            }
+
+
             MainWindow.UpdateTasksList();
 
             this.Close();
             
+        }
+
+        private void AddTagButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.TagsStackPanel.Children.Add(CreateTextBox());
+        }
+
+        private TextBox CreateTextBox()
+        {
+            TextBox tb = new TextBox();
+            tb.Margin = new Thickness(5);
+            return tb;;
         }
     }
 }

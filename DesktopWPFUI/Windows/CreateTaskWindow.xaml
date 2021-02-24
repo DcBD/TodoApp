@@ -5,64 +5,88 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DesktopWPFUI.Windows"
         mc:Ignorable="d"
-        Title="Creating task" Height="400" Width="800" ResizeMode="NoResize"  >
+        Title="Creating task" Height="450" Width="800" ResizeMode="NoResize"  >
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF0D52B6" Offset="0"/>
+            <GradientStop Color="#FF164487" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="40" />
             <ColumnDefinition Width="auto" />
-            <ColumnDefinition Width="*" />
             <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="40" />
 
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="20" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="250" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
 
-        <Label Content="Name" Grid.Column="1" Grid.Row="1" FontWeight="Bold"/>
-        <TextBox Grid.Column="2" Grid.Row="1" Name="Name" BorderThickness="1,1,1,0" FontSize="17"/>
+        <TextBlock Grid.Column="1" Grid.Row="1" Text="Creating task" Foreground="#FFF7F7F7" FontWeight="Bold" FontSize="26"  Padding="5"/>
+        <TextBox Grid.Column="3" Grid.Row="1" Name="Name" BorderThickness="1,1,1,0" FontSize="30"/>
+        <TextBox Grid.Column="3" Grid.Row="3" TextWrapping="Wrap" AcceptsReturn="True" AcceptsTab="True" Name="Description" FontSize="18"/>
 
-        <Grid Grid.Column="2" Grid.Row="3" Margin="0,2">
+        <Button Grid.Column="3" Grid.Row="5"  Content="Save" Click="BtnSaveHandleClick"  Width="400" Padding="7" Name="BtnSave" Foreground="Black" BorderBrush="Black" Background="White" FontWeight="Bold" FontSize="16" Margin="40"/>
+
+        <Grid Grid.Row="3" Grid.Column="1" Background="#56112F6E" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
             </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="auto"/>
 
-            </Grid.ColumnDefinitions>
+            <Label Content="Task planned start" Grid.Row="0" Grid.Column="0" FontWeight="Bold" Foreground="White"/>
+            <DatePicker Grid.Row="1" Grid.Column="1" Name="Start" Background="#FF0074FF" />
             
-            <Label Content="Start" Grid.Row="1" Grid.Column="0" FontWeight="Bold"/>
-            <DatePicker Grid.Row="1" Grid.Column="1" Name="Start" />
 
-            <Label Grid.Row="1" Grid.Column="3" Content="End" FontWeight="Bold"/>
-            <DatePicker Grid.Row="1" Grid.Column="4" />
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="auto" />
+
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="auto" />
+  
+                </Grid.RowDefinitions>
+
+                <Label Content="Tags"  Grid.Column="0"  Grid.Row="1" FontWeight="Bold" Foreground="White"/>
+                <Button x:Name="AddTagButton" Grid.Column="2" Grid.Row="1" Content="Add tag" Padding="4" Background="White" Click="AddTagButton_Click"/>
+
+  
+
+            </Grid>
+            
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200" />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Name="TagsStackPanel">
+                   
+                </StackPanel>
+
+            </Grid>
+      
+            
+            
+            
+
         </Grid>
 
-        <Label Content="Description" Grid.Column="1" Grid.Row="2" FontWeight="Bold"/>
-        <TextBox TextWrapping="Wrap" AcceptsReturn="True" AcceptsTab="True" Grid.Column="2" Grid.Row="2" Name="Description" />
-
-        <Grid Grid.Row="4" Grid.Column="2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="auto" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-
-            <Grid.RowDefinitions>
-                <RowDefinition Height="auto" />
-            </Grid.RowDefinitions>
-
-            <Button Grid.Column="1" Grid.Row="0"  Content="Save" Click="BtnSaveHandleClick"  Width="100" Padding="7" Background="#FFC4EA60" Name="BtnSave"/>
-
-        </Grid>
 
     </Grid>
 </Window>

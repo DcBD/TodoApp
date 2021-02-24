@@ -89,6 +89,15 @@
     </ApplicationDefinition>
     <Compile Include="Commands\CreateTaskCommand.cs" />
     <Compile Include="Commands\UpdateCurrentViewModelCommand.cs" />
+    <Compile Include="Controls\SideBarNavigation\NavigationBar.xaml.cs">
+      <DependentUpon>NavigationBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SideBarNavigation\SideBarIconItem.xaml.cs">
+      <DependentUpon>SideBarIconItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SideBarNavigation\SideBarNavigationItem.xaml.cs">
+      <DependentUpon>SideBarNavigationItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\TaskCard.xaml.cs">
       <DependentUpon>TaskCard.xaml</DependentUpon>
     </Compile>
@@ -98,6 +107,9 @@
     <Compile Include="Models\ObservableObject.cs" />
     <Compile Include="State\Navigators\INavigator.cs" />
     <Compile Include="State\Navigators\Navigator.cs" />
+    <Compile Include="TodoAppMainWindow.xaml.cs">
+      <DependentUpon>TodoAppMainWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="ViewModels\CreateTaskViewModel.cs" />
@@ -106,10 +118,25 @@
     <Compile Include="Views\HomeView.xaml.cs">
       <DependentUpon>HomeView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\CreateTagWindow.xaml.cs">
+      <DependentUpon>CreateTagWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\CreateTaskWindow.xaml.cs">
       <DependentUpon>CreateTaskWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="Controls\NavigationBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\SideBarNavigation\NavigationBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\SideBarNavigation\SideBarIconItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\SideBarNavigation\SideBarNavigationItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -136,7 +163,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Styles\Navigation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TodoAppMainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\HomeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\CreateTagWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -197,6 +236,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Sources\icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sources\icons\user.png" />
+    <Resource Include="Sources\icons\logo.png" />
+    <Content Include="Sources\icons\logo1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Sources\icons\tag.png" />
+    <Resource Include="Sources\icons\task.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -34,3 +34,16 @@ D:\Projects\School\TodoApp\DesktopWPFUI\bin\Debug\EntityFramework.SqlServer.dll
 D:\Projects\School\TodoApp\DesktopWPFUI\bin\Debug\EntityFramework.SqlServer.xml
 D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Controls\TaskContents.g.cs
 D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Controls\TaskContents.baml
+D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Windows\CreateTagWindow.g.cs
+D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Windows\CreateTagWindow.baml
+D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Controls\SideBarNavigation\SideBarIconItem.g.cs
+D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Controls\SideBarNavigation\SideBarNavigationItem.g.cs
+D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\TodoAppMainWindow.g.cs
+D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Controls\SideBarNavigation\NavigationBar.g.cs
+D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Controls\SideBarNavigation\SideBarIconItem.baml
+D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\TodoApp_Content.g.cs
+D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Controls\SideBarNavigation\NavigationBar.baml
+D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Controls\SideBarNavigation\SideBarNavigationItem.baml
+D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\TodoAppMainWindow.baml
+D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\App.baml
+D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Styles\Navigation.baml
