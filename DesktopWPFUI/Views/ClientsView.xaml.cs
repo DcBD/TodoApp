@@ -10,21 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
-using DesktopWPFUI.ViewModels;
 
-namespace DesktopWPFUI
+namespace DesktopWPFUI.Views
 {
     /// <summary>
-    /// Logika interakcji dla klasy TodoAppMainWindow.xaml
+    /// Logika interakcji dla klasy ClientsView.xaml
     /// </summary>
-    public partial class TodoAppMainWindow : Window
+    public partial class ClientsView : UserControl
     {
-       
-        public TodoAppMainWindow()
+        public ClientsView()
         {
-            this.DataContext = new TasksViewModel();
-
             InitializeComponent();
         }
     }

@@ -3,6 +3,7 @@ using DesktopWPFUI.Models;
 using DesktopWPFUI.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,13 +13,12 @@ namespace DesktopWPFUI.State.Navigators
 {
     public enum ViewType
     {
-        Home,
-        Task,
-        CreateTask,
-        Main
+        Tasks,
+        Clients,
+        Tags
     }
 
-    public class Navigator : ObservableObject, INavigator
+    public class Navigator : ObservableObject, INavigator, INotifyPropertyChanged
     {
 
         private ViewModelBase _currentViewModel;
@@ -31,6 +31,8 @@ namespace DesktopWPFUI.State.Navigators
                 OnPropertyChanged(nameof(CurrentViewModel));
             }
         }
+
+
 
         public ICommand UpdateCurrentViewModelCommand => new UpdateCurrentViewModelCommand(this);
     }

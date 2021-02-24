@@ -25,11 +25,12 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="150" />
-            <ColumnDefinition Width="auto" />
-            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="*" />
+         
         </Grid.ColumnDefinitions>
         
-        <navigation:NavigationBar Background="#7F000C27" />
-        
+        <navigation:NavigationBar Background="#7F000C27" DataContext="{Binding Navigator}" />
+        <ContentControl Grid.Column="1" Content="{Binding Navigator.CurrentViewModel}" />
+
     </Grid>
 </Window>

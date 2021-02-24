@@ -8,7 +8,9 @@ FD:\Projects\School\TodoApp\DesktopWPFUI\Controls\TaskContents.xaml;;
 FD:\Projects\School\TodoApp\DesktopWPFUI\MainWindow.xaml;;
 FD:\Projects\School\TodoApp\DesktopWPFUI\Styles\Navigation.xaml;;
 FD:\Projects\School\TodoApp\DesktopWPFUI\TodoAppMainWindow.xaml;;
-FD:\Projects\School\TodoApp\DesktopWPFUI\Views\HomeView.xaml;;
+FD:\Projects\School\TodoApp\DesktopWPFUI\Views\ClientsView.xaml;;
+FD:\Projects\School\TodoApp\DesktopWPFUI\Views\TagsView.xaml;;
+FD:\Projects\School\TodoApp\DesktopWPFUI\Views\TasksView.xaml;;
 FD:\Projects\School\TodoApp\DesktopWPFUI\Windows\CreateTagWindow.xaml;;
 FD:\Projects\School\TodoApp\DesktopWPFUI\Windows\CreateTaskWindow.xaml;;
 

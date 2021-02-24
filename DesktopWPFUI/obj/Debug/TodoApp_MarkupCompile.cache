@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Projects\School\TodoApp\DesktopWPFUI\App.xaml
-121317608745
+141089571377
 1-1343296416
-25-681126034
+261472084248
 18-922264137
-Controls\NavigationBar.xaml;Controls\SideBarNavigation\NavigationBar.xaml;Controls\SideBarNavigation\SideBarIconItem.xaml;Controls\SideBarNavigation\SideBarNavigationItem.xaml;Controls\TaskCard.xaml;Controls\TaskContents.xaml;MainWindow.xaml;Styles\Navigation.xaml;TodoAppMainWindow.xaml;Views\HomeView.xaml;Windows\CreateTagWindow.xaml;Windows\CreateTaskWindow.xaml;
+Controls\NavigationBar.xaml;Controls\SideBarNavigation\NavigationBar.xaml;Controls\SideBarNavigation\SideBarIconItem.xaml;Controls\SideBarNavigation\SideBarNavigationItem.xaml;Controls\TaskCard.xaml;Controls\TaskContents.xaml;MainWindow.xaml;Styles\Navigation.xaml;TodoAppMainWindow.xaml;Views\ClientsView.xaml;Views\TagsView.xaml;Views\TasksView.xaml;Windows\CreateTagWindow.xaml;Windows\CreateTaskWindow.xaml;
 
 False
 

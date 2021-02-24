@@ -32,19 +32,15 @@ namespace DesktopWPFUI.Commands
             {
                 ViewType viewType = (ViewType) parameter;
 
-                switch (viewType)
-                {
-                    case ViewType.Home:
-                        _navigator.CurrentViewModel = new HomeViewModel();
+                switch (viewType) {
+                    case ViewType.Tasks:
+                        _navigator.CurrentViewModel = new TasksViewModel();
                         break;
-                    case ViewType.Task:
-                        _navigator.CurrentViewModel = new TaskViewModel();
+                    case ViewType.Clients:
+                        _navigator.CurrentViewModel = new ClientsViewModel();
                         break;
-                    case ViewType.CreateTask:
-                        _navigator.CurrentViewModel = new CreateTaskViewModel();
-                        break;
-                    case ViewType.Main:
-                        _navigator.CurrentViewModel = new MainViewModel();
+                    case ViewType.Tags:
+                        _navigator.CurrentViewModel = new TagsViewModel();
                         break;
                 }
             }

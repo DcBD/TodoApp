@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace DesktopWPFUI.Views
 {
     /// <summary>
-    /// Logika interakcji dla klasy HomeView.xaml
+    /// Logika interakcji dla klasy TagsView.xaml
     /// </summary>
-    public partial class HomeView : UserControl
+    public partial class TagsView : UserControl
     {
-        public HomeView()
+        public TagsView()
         {
             InitializeComponent();
         }

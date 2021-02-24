@@ -2,10 +2,30 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:DesktopWPFUI"
+             xmlns:viewmodels="clr-namespace:DesktopWPFUI.ViewModels"
+             xmlns:views="clr-namespace:DesktopWPFUI.Views"
              StartupUri="TodoAppMainWindow.xaml">
     <Application.Resources>
 
-        <ResourceDictionary Source="/Styles/Navigation.xaml" />
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/Navigation.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+  
+
+            <DataTemplate DataType="{x:Type viewmodels:TasksViewModel}">
+                <views:TasksView />
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:ClientsViewModel}">
+                <views:ClientsView />
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:TagsViewModel}">
+                <views:TagsView />
+            </DataTemplate>
+
+        </ResourceDictionary>
 
     </Application.Resources>
 </Application>

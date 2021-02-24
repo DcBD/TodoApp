@@ -17,10 +17,8 @@ D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Controls\NavigationBar.g.cs
 D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Controls\NavigationBar.baml
 D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\GeneratedInternalTypeHelper.g.cs
 D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Controls\TaskCard.g.cs
-D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Views\HomeView.g.cs
 D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Windows\CreateTaskWindow.g.cs
 D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Controls\TaskCard.baml
-D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Views\HomeView.baml
 D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Windows\CreateTaskWindow.baml
 D:\Projects\School\TodoApp\DesktopWPFUI\bin\Debug\TodoApp.Domain.dll
 D:\Projects\School\TodoApp\DesktopWPFUI\bin\Debug\TodoApp.EntityFramework.dll
@@ -47,3 +45,9 @@ D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Controls\SideBarNavigation\Sid
 D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\TodoAppMainWindow.baml
 D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\App.baml
 D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Styles\Navigation.baml
+D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Views\ClientsView.g.cs
+D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Views\TagsView.g.cs
+D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Views\TasksView.g.cs
+D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Views\ClientsView.baml
+D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Views\TagsView.baml
+D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\Views\TasksView.baml
