@@ -39,24 +39,35 @@
 
         </Grid>
 
-        <ListBox x:Name="TasksItemList"  ItemsSource="{Binding Tasks}" Background="#35000000" HorizontalContentAlignment="Stretch" >
+        <ItemsControl  Grid.Row="1" x:Name="TasksItemList" ItemsSource="{Binding Tasks}"  HorizontalContentAlignment="Stretch" >
+
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+
+                    <StackPanel Name="TasksListStackPanel" Orientation="Vertical">
+
+                        <taskControls:TaskBlock DataContext="{Binding Path=., NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}" />
+                    </StackPanel>
+
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
+        <!--<ListBox Grid.Row="1" x:Name="TasksItemList"  ItemsSource="{Binding Tasks}" Background="#35000000" HorizontalContentAlignment="Stretch" >
             <ListBox.ItemContainerStyle>
                 <Style TargetType="ListBoxItem">
                     <Setter Property="HorizontalAlignment" Value="Stretch"/>
                     <Setter Property="Padding" Value="0" />
                 </Style>
             </ListBox.ItemContainerStyle>
+
             <ListBox.ItemTemplate>
                 <DataTemplate>
-
-                    <Border x:Name="BXX" >
-                        <taskControls:TaskBlock />
-                    </Border>
-
+                    <taskControls:TaskBlock />
                 </DataTemplate>
 
             </ListBox.ItemTemplate>
-        </ListBox>
+        </ListBox>-->
 
 
 

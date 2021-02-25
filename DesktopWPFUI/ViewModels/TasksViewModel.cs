@@ -14,7 +14,7 @@ namespace DesktopWPFUI.ViewModels
     {
 
 
-        private List<TaskModel> _tasks;
+        private List<TaskModel> _tasks = new List<TaskModel>();
         public List<TaskModel> Tasks {
             get { return _tasks; }
             set { _tasks = value; this.OnPropertyChanged("Tasks"); }

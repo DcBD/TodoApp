@@ -115,7 +115,9 @@
     </Compile>
     <Compile Include="ViewModels\ClientsViewModel.cs" />
     <Compile Include="ViewModels\TagsViewModel.cs" />
+    <Compile Include="ViewModels\TaskItemViewModel.cs" />
     <Compile Include="ViewModels\TasksViewModel.cs" />
+    <Compile Include="ViewModels\TaskViewContentsWIndowViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="Views\ClientsView.xaml.cs">
       <DependentUpon>ClientsView.xaml</DependentUpon>
@@ -131,6 +133,9 @@
     </Compile>
     <Compile Include="Windows\CreateTaskWindow.xaml.cs">
       <DependentUpon>CreateTaskWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\TaskContentViewWindow.xaml.cs">
+      <DependentUpon>TaskContentViewWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="Controls\NavigationBar.xaml">
       <SubType>Designer</SubType>
@@ -203,6 +208,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Windows\TaskContentViewWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -258,6 +267,9 @@
     <Resource Include="Sources\icon.ico" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Sources\icons\checked.png" />
+    <Resource Include="Sources\icons\inprogress.png" />
+    <Resource Include="Sources\icons\new.png" />
     <Resource Include="Sources\icons\user.png" />
     <Resource Include="Sources\icons\logo.png" />
     <Content Include="Sources\icons\logo1.svg" />
