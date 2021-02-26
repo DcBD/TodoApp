@@ -11,6 +11,9 @@ using System.Windows.Input;
 
 namespace DesktopWPFUI.State.Navigators
 {
+    /// <summary>
+    /// Navigator views
+    /// </summary>
     public enum ViewType
     {
         Tasks,

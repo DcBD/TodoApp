@@ -2,11 +2,9 @@ D:\Projects\School\TodoApp\DesktopWPFUI\bin\Debug\TodoApp.exe.config
 D:\Projects\School\TodoApp\DesktopWPFUI\bin\Debug\TodoApp.exe
 D:\Projects\School\TodoApp\DesktopWPFUI\bin\Debug\TodoApp.pdb
 D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\DesktopWPFUI.csprojAssemblyReference.cache
-D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\MainWindow.g.cs
 D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\App.g.cs
 D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\TodoApp_MarkupCompile.cache
 D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\TodoApp_MarkupCompile.lref
-D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\MainWindow.baml
 D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\TodoApp.g.resources
 D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\DesktopWPFUI.Properties.Resources.resources
 D:\Projects\School\TodoApp\DesktopWPFUI\obj\Debug\DesktopWPFUI.csproj.GenerateResource.cache

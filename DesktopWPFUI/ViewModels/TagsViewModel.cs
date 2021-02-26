@@ -15,6 +15,9 @@ namespace DesktopWPFUI.ViewModels
         public INavigator Navigator { get; set; } = new Navigator();
 
         private List<Tag> _tags = new List<Tag>();
+        /// <summary>
+        /// Tags list
+        /// </summary>
         public List<Tag> Tags {
             get { return _tags; }
             set { _tags = value; this.OnPropertyChanged("Tags"); }

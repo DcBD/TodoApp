@@ -20,8 +20,13 @@ namespace DesktopWPFUI.Windows
     public partial class CreateTagWindow : Window
     {
         
+
         private CreateTaskWindow CreateTaskWindow { get; set; }
 
+        /// <summary>
+        /// Creates window
+        /// </summary>
+        /// <param name="createTaskWindow"></param>
         public CreateTagWindow(CreateTaskWindow createTaskWindow)
         {
             CreateTaskWindow = createTaskWindow;

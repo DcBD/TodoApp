@@ -20,6 +20,9 @@ namespace DesktopWPFUI.Views
     /// </summary>
     public partial class ClientsView : UserControl
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public ClientsView()
         {
             InitializeComponent();

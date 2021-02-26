@@ -31,6 +31,9 @@ namespace DesktopWPFUI.Views
 
             }
         }
+        /// <summary>
+        /// Creates instance of a tasks view.
+        /// </summary>
         public TasksView()
         {
             InitializeComponent();

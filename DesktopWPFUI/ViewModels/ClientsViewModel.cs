@@ -9,6 +9,9 @@ namespace DesktopWPFUI.ViewModels
 {
     public class ClientsViewModel : ViewModelBase
     {
+        /// <summary>
+        /// Navigator
+        /// </summary>
         public INavigator Navigator { get; set; } = new Navigator();
     }
 }

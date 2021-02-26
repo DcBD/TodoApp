@@ -22,8 +22,15 @@ namespace DesktopWPFUI.Windows
     {
         private TaskModel Task { get; set; }
 
+        /// <summary>
+        /// Property change event handler
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
+        /// <summary>
+        /// Creates an instance of a taskt content view window
+        /// </summary>
+        /// <param name="taskModel"></param>
         public TaskContentViewWindow(TaskModel taskModel)
         {
             Task = taskModel;
@@ -33,6 +40,10 @@ namespace DesktopWPFUI.Windows
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Refreshes tasks view
+        /// </summary>
+        /// <param name="task"></param>
         public void Refresh(TaskModel task)
         {
             this.Task = task;

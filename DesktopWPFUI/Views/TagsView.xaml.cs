@@ -20,6 +20,9 @@ namespace DesktopWPFUI.Views
     /// </summary>
     public partial class TagsView : UserControl
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public TagsView()
         {
             InitializeComponent();
