@@ -12,7 +12,11 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DesktopWPFUI.State.Navigators;
+using DesktopWPFUI.ViewModels;
+using DesktopWPFUI.Windows;
 using TodoApp.Domain.Enums;
+using TodoApp.Domain.Models;
 using TodoApp.Domain.Services;
 using TodoApp.EntityFramework;
 using TodoApp.EntityFramework.Services;
@@ -28,7 +32,7 @@ namespace DesktopWPFUI.Controls
         public object Task { get; set; }
         public object TaskContentsData { get; set; }
 
-     
+
 
         public TaskContents()
         {
@@ -39,7 +43,7 @@ namespace DesktopWPFUI.Controls
             DataContext = this;
         }
 
-    
+
 
 
 
@@ -55,12 +59,28 @@ namespace DesktopWPFUI.Controls
 
             if (taskModel != null) {
                 IDataService<TaskModel> taskService = new TaskDataService(new TodoAppDbContextFactory());
+                GenericDataService<Tag> tagService = new GenericDataService<Tag>(new TodoAppDbContextFactory());
+                GenericDataService<TaskTag> taskTagService = new GenericDataService<TaskTag>(new TodoAppDbContextFactory());
+
 
                 taskService.Delete(taskModel.Id);
 
-                MainWindow mainWindow = (MainWindow) Window.GetWindow(this);
 
-                mainWindow.UpdateTasksList();
+                TodoAppMainWindow window = (TodoAppMainWindow) Application.Current.MainWindow;
+
+                if (window.DataContext is TasksViewModel) {
+                    TasksViewModel vm = (TasksViewModel) window.DataContext;
+
+                    vm.Navigator.UpdateCurrentViewModelCommand.Execute(ViewType.Tasks);
+
+                    Window current = Window.GetWindow(this);
+
+                    current.Close();
+                }
+
+
+
+
             }
         }
 
@@ -83,26 +103,41 @@ namespace DesktopWPFUI.Controls
 
                 taskModel.Status = status;
 
-                taskService.Update(taskModel.Id, taskModel);
+               taskService.Update(taskModel.Id, taskModel);
 
-                MainWindow mainWindow = (MainWindow) Window.GetWindow(this);
+                
 
-                mainWindow.UpdateTasksList();
+                TodoAppMainWindow window = (TodoAppMainWindow) Application.Current.MainWindow;
+
+                if (window.DataContext is TasksViewModel) {
+                    TasksViewModel vm = (TasksViewModel) window.DataContext;
+
+                    vm.Navigator.UpdateCurrentViewModelCommand.Execute(ViewType.Tasks);
+                }
+
+                Window current = Window.GetWindow(this);
+
+                MessageBox.Show("Status was changed", "Success");
+                
+
+                current.Close();
             }
         }
 
 
-  
+
 
         private void UserControl_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
-            
-            if(this.DataContext is TaskModel) {
+
+            if (this.DataContext is TaskModel) {
                 var taskModel = (TaskModel) this.DataContext;
 
                 this.StartTaskButton.Visibility = taskModel.Status == Status.NEW ? Visibility.Visible : Visibility.Hidden;
                 this.SetTaskAsFinished.Visibility = taskModel.Status == Status.IN_PROGRESS ? Visibility.Visible : Visibility.Hidden;
             }
+
+            
 
         }
     }

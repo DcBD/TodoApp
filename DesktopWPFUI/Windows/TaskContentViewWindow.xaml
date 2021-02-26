@@ -23,6 +23,6 @@
         </LinearGradientBrush>
     </Window.Background>
     <Grid>
-        <controls:TaskContents DataContext="{Binding Path=.}"/>
+        <controls:TaskContents DataContext="{Binding Path=., NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True}"/>
     </Grid>
 </Window>

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DesktopWPFUI.Windows;
 
 namespace DesktopWPFUI.Views
 {
@@ -20,9 +21,25 @@ namespace DesktopWPFUI.Views
     /// </summary>
     public partial class TasksView : UserControl
     {
+        CreateTaskWindow _createTaskWindow;
+        CreateTaskWindow CreateTaskWindow {
+            get { return _createTaskWindow; }
+            set {
+                if (CreateTaskWindow != null) CreateTaskWindow.Close();
+
+                _createTaskWindow = value;
+
+            }
+        }
         public TasksView()
         {
             InitializeComponent();
+        }
+
+        private void ButtonCreateTask_Click(object sender, RoutedEventArgs e)
+        {
+            CreateTaskWindow = new CreateTaskWindow((TodoAppMainWindow) Window.GetWindow(this));
+            CreateTaskWindow.Show();
         }
     }
 }

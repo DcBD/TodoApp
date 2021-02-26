@@ -14,6 +14,6 @@ namespace DesktopWPFUI
     public partial class App : Application
     {
 
-  
+
     }
 }

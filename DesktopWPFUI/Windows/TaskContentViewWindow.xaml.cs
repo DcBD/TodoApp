@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,9 +18,12 @@ namespace DesktopWPFUI.Windows
     /// <summary>
     /// Logika interakcji dla klasy TaskContentViewWindow.xaml
     /// </summary>
-    public partial class TaskContentViewWindow : Window
+    public partial class TaskContentViewWindow : Window, INotifyPropertyChanged
     {
         private TaskModel Task { get; set; }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
         public TaskContentViewWindow(TaskModel taskModel)
         {
             Task = taskModel;
@@ -28,5 +32,15 @@ namespace DesktopWPFUI.Windows
 
             InitializeComponent();
         }
+
+        public void Refresh(TaskModel task)
+        {
+            this.Task = task;
+            this.DataContext = Task;
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Task"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("DataContext"));
+
+        }
+
     }
 }

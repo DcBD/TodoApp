@@ -21,6 +21,9 @@ namespace DesktopWPFUI
     public partial class TodoAppMainWindow : Window
     {
        
+        /// <summary>
+        /// Creates an instance
+        /// </summary>
         public TodoAppMainWindow()
         {
             this.DataContext = new TasksViewModel();

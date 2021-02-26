@@ -28,6 +28,7 @@ namespace DesktopWPFUI.Commands
 
         public void Execute(object parameter)
         {
+
             if(parameter is ViewType)
             {
                 ViewType viewType = (ViewType) parameter;

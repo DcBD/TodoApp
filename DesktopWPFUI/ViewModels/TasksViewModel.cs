@@ -33,9 +33,7 @@ namespace DesktopWPFUI.ViewModels
             TaskDataService taskService = new TaskDataService(new TodoAppDbContextFactory());
 
             Tasks = taskService.GetAllItems();
-
-
-            Console.WriteLine(Tasks.Count());
+    
 
 
         }

@@ -39,7 +39,7 @@ namespace DesktopWPFUI.Controls
 
             if (CreateTaskWindow != null) CreateTaskWindow.Close();
 
-            CreateTaskWindow = new CreateTaskWindow((MainWindow) Window.GetWindow(this));
+            //CreateTaskWindow = new CreateTaskWindow((MainWindow) Window.GetWindow(this));
 
             CreateTaskWindow.Show();
 

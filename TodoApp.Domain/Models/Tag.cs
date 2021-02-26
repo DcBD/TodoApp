@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace TodoApp.Domain.Models
 {
+    /// <summary>
+    /// Tag model
+    /// </summary>
     public class Tag : DomainObject
     {
+        /// <summary>
+        /// Tag name
+        /// </summary>
         public string Name { get; set; }
     }
 }

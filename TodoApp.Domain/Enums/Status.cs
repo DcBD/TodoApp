@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace TodoApp.Domain.Enums
 {
+    /// <summary>
+    /// Statuses in application
+    /// </summary>
     public enum Status
     {
         NEW,

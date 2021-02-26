@@ -12,23 +12,49 @@ namespace TodoApp.EntityFramework.Services
     {
 
         private readonly TodoAppDbContextFactory _contextFactory;
-
+        /// <summary>
+        /// Creates an instance of GenericDataService
+        /// </summary>
+        /// <param name="contextFactory"></param>
         public GenericDataService(TodoAppDbContextFactory contextFactory)
         {
             _contextFactory = contextFactory;
         }
-
+        /// <summary>
+        /// Creates an entity
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
         public async Task<T> Create(T entity)
         {
             using(TodoAppDbContext context = _contextFactory.CreateDbContext())
             {
                 var createdEntity = context.Set<T>().Add(entity);
-                await context.SaveChangesAsync();
+                context.SaveChanges();
 
                 return createdEntity;
             }
         }
 
+
+        /// <summary>
+        /// Gets all entities
+        /// </summary>
+        /// <returns></returns>
+        public List<T> GetAllItems()
+        {
+            using (TodoAppDbContext context = _contextFactory.CreateDbContext())
+            {
+                List<T> entities = context.Set<T>().ToList();
+
+                return entities;
+            }
+        }
+        /// <summary>
+        /// Deletes entity
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public async Task<bool> Delete(int id)
         {
             using (TodoAppDbContext context = _contextFactory.CreateDbContext())
@@ -40,7 +66,11 @@ namespace TodoApp.EntityFramework.Services
                 return true;
             }
         }
-
+        /// <summary>
+        /// Gets entity
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public async Task<T> Get(int id)
         {
             using (TodoAppDbContext context = _contextFactory.CreateDbContext())
@@ -50,7 +80,10 @@ namespace TodoApp.EntityFramework.Services
                 return entity;
             }
         }
-
+        /// <summary>
+        /// Gets all entities
+        /// </summary>
+        /// <returns></returns>
         public Task<IEnumerable<T>> GetAll()
         {
             using (TodoAppDbContext context = _contextFactory.CreateDbContext())
@@ -60,7 +93,12 @@ namespace TodoApp.EntityFramework.Services
                 return (Task<IEnumerable<T>>)entities;
             }
         }
-
+        /// <summary>
+        /// Updates entity
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="entity"></param>
+        /// <returns></returns>
         public async Task<T> Update(int id, T entity)
         {
             using (TodoAppDbContext context = _contextFactory.CreateDbContext())

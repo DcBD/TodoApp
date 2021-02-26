@@ -11,6 +11,10 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using DesktopWPFUI.Commands;
+using DesktopWPFUI.State.Navigators;
+using DesktopWPFUI.ViewModels;
+using TodoApp.Domain.Models;
 using TodoApp.Domain.Services;
 using TodoApp.EntityFramework;
 using TodoApp.EntityFramework.Services;
@@ -22,11 +26,11 @@ namespace DesktopWPFUI.Windows
     /// </summary>
     public partial class CreateTaskWindow : Window
     {
-        private MainWindow MainWindow { get; set; }
+        private TodoAppMainWindow MainWindow { get; set; }
 
-        private CreateTagWindow CreateTagWindow {get; set;}
+        private CreateTagWindow CreateTagWindow { get; set; }
 
-        public CreateTaskWindow(MainWindow mainWindow)
+        public CreateTaskWindow(TodoAppMainWindow mainWindow)
         {
             MainWindow = mainWindow;
             InitializeComponent();
@@ -35,25 +39,69 @@ namespace DesktopWPFUI.Windows
         private void BtnSaveHandleClick(object sender, RoutedEventArgs e)
         {
             IDataService<TaskModel> taskService = new TaskDataService(new TodoAppDbContextFactory());
+            IDataService<Tag> tagService = new GenericDataService<Tag>(new TodoAppDbContextFactory());
+            IDataService<TaskTag> taskTagService = new GenericDataService<TaskTag>(new TodoAppDbContextFactory());
 
-
-            taskService.Create(new TaskModel {
+            Task<TaskModel> t = taskService.Create(new TaskModel {
                 Name = this.Name.Text,
                 Description = this.Description.Text,
                 Start = this.Start.SelectedDate,
-            }).Wait();
+            });
 
-         
+            t.Wait();
 
-            foreach(TextBox tb in TagsStackPanel.Children.AsParallel()) {
-                Console.WriteLine(tb.Text);
+            TaskModel taskModel = t.Result;
+
+
+
+            foreach (TextBox tb in TagsStackPanel.Children.AsParallel()) {
+                if (tb.Text.Length > 0) {
+                    Task<Tag> tg = tagService.Create(new Tag {
+                        Name = tb.Text
+                    });
+                    tg.Wait();
+
+                    //Tag tagModel = tg.Result;
+                    //Tag tagModel = new Tag {
+                    //    Name = tb.Text
+                    //};
+
+                    //Task<TaskTag> ttg = taskTagService.Create(new TaskTag {
+                    //    Task = taskModel,
+                    //    Tag = tagModel
+                    //});
+
+                    //ttg.Wait();
+
+                    //TaskTag taskTag = ttg.Result;
+
+                    //if (taskModel.TaskTags == null) {
+                    //    taskModel.TaskTags = new List<TaskTag>() { taskTag };
+                    //}
+                    //else {
+                    //    taskModel.TaskTags.Prepend(taskTag);
+                    //}
+
+
+                    //taskService.Update(taskTag.Id, taskModel).Wait();
+                }
+
+
+                //taskModel.TaskTags.Prepend(createdTag)
+
+            }
+
+            if (MainWindow.DataContext is TasksViewModel) {
+                TasksViewModel tm = (TasksViewModel) MainWindow.DataContext;
+
+                tm.Navigator.UpdateCurrentViewModelCommand.Execute(ViewType.Tasks);
+
+
             }
 
 
-            MainWindow.UpdateTasksList();
-
             this.Close();
-            
+
         }
 
         private void AddTagButton_Click(object sender, RoutedEventArgs e)
@@ -65,7 +113,7 @@ namespace DesktopWPFUI.Windows
         {
             TextBox tb = new TextBox();
             tb.Margin = new Thickness(5);
-            return tb;;
+            return tb; ;
         }
     }
 }
