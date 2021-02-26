@@ -30,6 +30,10 @@ namespace DesktopWPFUI.Windows
 
         private CreateTagWindow CreateTagWindow { get; set; }
 
+        /// <summary>
+        /// Creates an instance of a window
+        /// </summary>
+        /// <param name="mainWindow"></param>
         public CreateTaskWindow(TodoAppMainWindow mainWindow)
         {
             MainWindow = mainWindow;

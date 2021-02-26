@@ -8,12 +8,12 @@ D:\Projects\School\TodoApp\TodoApp.EntityFramework\bin\Debug\TodoApp.Domain.pdb
 D:\Projects\School\TodoApp\TodoApp.EntityFramework\bin\Debug\EntityFramework.xml
 D:\Projects\School\TodoApp\TodoApp.EntityFramework\bin\Debug\EntityFramework.SqlServer.xml
 D:\Projects\School\TodoApp\TodoApp.EntityFramework\obj\Debug\TodoApp.EntityFramework.csprojAssemblyReference.cache
+D:\Projects\School\TodoApp\TodoApp.EntityFramework\obj\Debug\TodoApp.EntityFramework.Migrations.init.resources
+D:\Projects\School\TodoApp\TodoApp.EntityFramework\obj\Debug\TodoApp.EntityFramework.Migrations.update_task_add_start.resources
+D:\Projects\School\TodoApp\TodoApp.EntityFramework\obj\Debug\TodoApp.EntityFramework.Migrations.add_status_field_to_task_table.resources
+D:\Projects\School\TodoApp\TodoApp.EntityFramework\obj\Debug\TodoApp.EntityFramework.Migrations.add_task_tags.resources
+D:\Projects\School\TodoApp\TodoApp.EntityFramework\obj\Debug\TodoApp.EntityFramework.csproj.GenerateResource.cache
 D:\Projects\School\TodoApp\TodoApp.EntityFramework\obj\Debug\TodoApp.EntityFramework.csproj.CoreCompileInputs.cache
 D:\Projects\School\TodoApp\TodoApp.EntityFramework\obj\Debug\TodoApp.EntityFramework.csproj.CopyComplete
 D:\Projects\School\TodoApp\TodoApp.EntityFramework\obj\Debug\TodoApp.EntityFramework.dll
 D:\Projects\School\TodoApp\TodoApp.EntityFramework\obj\Debug\TodoApp.EntityFramework.pdb
-D:\Projects\School\TodoApp\TodoApp.EntityFramework\obj\Debug\TodoApp.EntityFramework.Migrations.init.resources
-D:\Projects\School\TodoApp\TodoApp.EntityFramework\obj\Debug\TodoApp.EntityFramework.csproj.GenerateResource.cache
-D:\Projects\School\TodoApp\TodoApp.EntityFramework\obj\Debug\TodoApp.EntityFramework.Migrations.update_task_add_start.resources
-D:\Projects\School\TodoApp\TodoApp.EntityFramework\obj\Debug\TodoApp.EntityFramework.Migrations.add_status_field_to_task_table.resources
-D:\Projects\School\TodoApp\TodoApp.EntityFramework\obj\Debug\TodoApp.EntityFramework.Migrations.add_task_tags.resources
